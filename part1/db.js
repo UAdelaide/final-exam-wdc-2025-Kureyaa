@@ -1,9 +1,9 @@
 const mysql = require('mysql2/promise');
 
 const db = mysql.createPool({
-  host: 'loca',
+  host: 'local host',
   user: 'root',
-  password: 'newpassword',
+  password: '',
   database: 'textbook_marketplace'
 });
 
