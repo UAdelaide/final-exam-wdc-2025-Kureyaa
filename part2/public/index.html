@@ -65,8 +65,11 @@
             const picResponse = await fetch(`https://dog.ceo/api/breeds/image/random`);
             const picData = await picResponse.json();
             dog.photoUrl = picData.message;
-          } 
-      }
+          }
+      } catch (err) {
+          console.error('Failed to fetch dogs:', err);
+          }
+        }
     }).mount('#app');
   </script>
   <script src="/javascripts/page.js"></script>
