@@ -60,7 +60,10 @@
           const res = await fetch('/api/dogs');
           this.dogs = await res.json();
 
-          for (const dog of this.dogs)
+          for (const dog of this.dogs) {
+            const picResponse = await fetch(`https://dog.ceo/api/breeds/image/random`);
+            const picData = await picResponse.json();
+          }
         }
       }
     }).mount('#app');
