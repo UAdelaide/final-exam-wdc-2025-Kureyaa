@@ -226,5 +226,5 @@ function logout(){
 }
 
 async function getCurrentUser() {
-    
+    const res = await fetch('/api/users/me')
 }
