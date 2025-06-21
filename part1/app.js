@@ -95,7 +95,7 @@ app.get('/api/walkers/summary', async (req, res) => {
          FROM Users u
          LEFT JOIN WalkRatings r ON r.walker_id = u.user_id
          WHERE u.role = 'walker'
-         GROUP BY u.username`
+         GROUP BY u.user_id, u.username`
     );
     res.json(rows);
   } catch (err) {
