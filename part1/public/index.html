@@ -15,6 +15,17 @@
         <button type="button" @click="alert('Learn More')">More Info</button>
     </div>
 
-    <footer></footer>
+    <footer>Best Dog Walk Service Website!</footer>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    dogImage: 'https://images.dog.ceo/breeds/terrier-fox/n02095314_1006.jpg'
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
 </body>
 </html>
