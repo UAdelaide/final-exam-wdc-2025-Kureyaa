@@ -194,7 +194,9 @@ function login(){
 
             // Redirect based on role
             if (user.role === 'owner') {
-                
+                window.location.href = '/owner-dashboard.html';
+            } else {
+                window.location.href = '/user-dashboard.html';
             }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
