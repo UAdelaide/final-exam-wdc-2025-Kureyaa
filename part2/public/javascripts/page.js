@@ -188,10 +188,8 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             if (user.role === 'owner') {
-                window.location.href = '/owner';
+                window.location.href = '/owner-';
             }
-            else {
-                window.location.href = '/walker';
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
