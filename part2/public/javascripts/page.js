@@ -226,5 +226,7 @@ function logout(){
 }
 
 async function getCurrentUser() {
-    const res = await fetch('/api/users/me')
+    const res = await fetch('/api/users/me', {
+        credentials: 'same-origin'
+    });
 }
