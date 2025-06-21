@@ -192,7 +192,10 @@ function login(){
             // Store session
             sessionStorage.setItem('currentUser', JSON.stringify(user));
 
-            
+            // Redirect based on role
+            if (user.role === 'owner') {
+                
+            }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
