@@ -190,7 +190,9 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
             alert("Welcome "+this.responseText);
             // Store session
-            sessionStorage.setItem('currentUser', user.user);
+            sessionStorage.setItem('currentUser', JSON.stringify(user));
+
+            
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
