@@ -23,7 +23,14 @@
             data() {
                 return { dogImage: '' }
             },
-            methods:
+            methods: {
+                bookWalk() {
+                    alert('Booked!');
+                },
+                learnMore() {
+                    alert('Learn More');
+                }
+            }
             async mounted() {
                 try {
                     const response = await fetch('https://dog.ceo/api/breeds/image/random');
