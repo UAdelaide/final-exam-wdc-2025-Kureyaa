@@ -72,6 +72,19 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
+app.get('/api/walkrequest', async (req, res) => {
+  try {
+    const [rows] = await db.query(
+        `SELECT d.name AS dog_name, d.size AS size, u.username AS owner_username
+         FROM Dogs d
+         JOIN Users u ON d.owner_id = u.user_id`
+    );
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch dogs' });
+  }
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
