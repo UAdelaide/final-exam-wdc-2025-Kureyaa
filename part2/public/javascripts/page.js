@@ -188,7 +188,9 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             if (user.role === 'owner') {
-                window.location.href = '/owner-';
+                window.location.href = '/owner-dashboard.html';
+            } else {
+                window.location.href = '/walker-dashboard.html';
             }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
