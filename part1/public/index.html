@@ -11,8 +11,8 @@
         <h1>Dog of the day</h1>
         <p>Name: Fido</p>
         <img :src="dogImage" alt="A cute random dog" width="400">
-        <button type="button" @click="alert('Booked!')">Book Walk</button>
-        <button type="button" @click="alert('Learn More')">More Info</button>
+        <button type="button" @click="bookWalk">Book Walk</button>
+        <button type="button" @click="">More Info</button>
     </div>
 
     <footer>Best Dog Walk Service Website!</footer>
@@ -30,7 +30,7 @@
                 learnMore() {
                     alert('Learn More');
                 }
-            }
+            },
             async mounted() {
                 try {
                     const response = await fetch('https://dog.ceo/api/breeds/image/random');
