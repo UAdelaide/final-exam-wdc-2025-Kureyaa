@@ -121,7 +121,17 @@
             message.value = '';
           }
         }
-        
+
+        // Fetch the list of dogs for the dropdown
+        async function loadDogs() {
+          try {
+            const res = await fetch('/api/dogs');
+            const data = await res.json();
+            form.value.dogs = data;
+          } catch (err) {
+            error.value = 'Failed to load dogs';
+          }
+        }
 
         onMounted(() => {
           loadWalks();
