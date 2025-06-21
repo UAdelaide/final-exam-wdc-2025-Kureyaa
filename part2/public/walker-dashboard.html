@@ -83,7 +83,7 @@
           return await res.json();
       }
 
-        onMounted(() => {
+        onMounted(async () => {
           loadWalkRequests();
 
           try {
