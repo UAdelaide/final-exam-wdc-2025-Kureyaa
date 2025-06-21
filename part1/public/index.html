@@ -20,7 +20,10 @@
     <script>
         const { createApp } = Vue;
         createApp({
-            data() { return { dogImage: '' }},
+            data() {
+                return { dogImage: '' }
+            },
+            methods:
             async mounted() {
                 try {
                     const response = await fetch('https://dog.ceo/api/breeds/image/random');
