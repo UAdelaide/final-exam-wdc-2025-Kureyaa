@@ -126,7 +126,9 @@
         // Fetch the list of dogs for the dropdown
         async function loadDogs() {
           try {
-            const res = await fetch('/users/dogs');
+            const res = await fetch('/users/dogs'), {
+              credentials: 'same'
+            };
             const list = await res.json();
             dogs.value = list;
           } catch {
