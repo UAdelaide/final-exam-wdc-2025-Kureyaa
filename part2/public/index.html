@@ -40,7 +40,7 @@
           <tr v-for="dog in dogs" :key="dog.dog_id">
             <td><img :src="dog.photoUrl" alt="dog photo" width="80" class="me-2">{{ dog.name }}</td>
             <td>{{ dog.size }}</td>
-            <td>{{ dog.owner_name }}</td>
+            <td>{{ dog.owner_username }}</td>
           </tr>
         </tbody>
       </table>
