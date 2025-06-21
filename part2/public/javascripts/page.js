@@ -224,3 +224,7 @@ function logout(){
     xmlhttp.send();
 
 }
+
+async function getCurrentUser() {
+    
+}
