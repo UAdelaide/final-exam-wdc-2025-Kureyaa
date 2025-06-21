@@ -59,6 +59,8 @@
         try {
           const res = await fetch('/api/dogs');
           this.dogs = await res.json();
+
+          await Promise.all
         }
       }
     }).mount('#app');
