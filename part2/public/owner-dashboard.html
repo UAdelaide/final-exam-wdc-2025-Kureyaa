@@ -127,8 +127,8 @@
         async function loadDogs() {
           try {
             const res = await fetch('/users/dogs', {
-             credentials: 'same-origin'
-           });
+              credentials: 'same-origin'
+            });
             const list = await res.json();
             dogs.value = list;
           } catch {
