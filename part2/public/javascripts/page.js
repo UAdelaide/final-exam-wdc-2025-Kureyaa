@@ -187,7 +187,11 @@ function login(){
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            
+            if (user.role === 'owner') {
+                window.location.href = '/owner';
+            }
+            else if (user.role === 'walker') {
+                window.location.href = '/walker';
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
