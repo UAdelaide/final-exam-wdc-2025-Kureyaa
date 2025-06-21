@@ -204,8 +204,6 @@ function login(){
         }
     xmlhttp.send(JSON.stringify(payload));
     };
-
-
 }
 
 function logout(){
