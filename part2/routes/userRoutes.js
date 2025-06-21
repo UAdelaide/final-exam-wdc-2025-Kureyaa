@@ -68,6 +68,6 @@ router.post('/logout', (req, res) => {
 });
 
 router.get('/dogs', (req, res) => {
-  const ownerId = req.session.user ? .user_id;
+  const ownerId = req.session.user?.user_id;
 });
 module.exports = router;
