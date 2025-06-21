@@ -60,7 +60,7 @@ app.get('/', async (req, res) => {
     const [users] = await db.execute('SELECT * FROM Users');
     res.json(users);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch books' });
+    res.status(500).json({ error: 'Failed to fetch users' });
   }
 });
 
@@ -69,7 +69,7 @@ app.get('/api/dogs', async (req, res) => {
     const [rows] = await db.execute('SELECT * FROM Dogs');
     res.json(rows);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch books' });
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 });
 
