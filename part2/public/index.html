@@ -25,7 +25,25 @@
       </div>
       <br>
       <button type="button" class="btn btn-primary" onclick="login()">Log In</button>
-      
+
+      <h2>All Dogs</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Breed</th>
+            <th>Age</th>
+            <th>Size</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="dog in dogs" :key="dog.id">
+            <td>{{ dog.name }}</td>
+            <td>{{ dog.breed }}</td>
+            <td>{{ dog.age }} years</td>
+            <td>{{ dog.size }}</td>
+          </tr>
+        </tbody>
   </div>
 
   <script>
