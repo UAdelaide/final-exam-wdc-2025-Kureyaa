@@ -198,7 +198,7 @@ function login(){
             } else {
                 window.location.href = '/user-dashboard.html';
             }
-        } else if (this.readyState == 4 && this.status >= 400) {
+        } else {
             alert("Login failed");
         }
     xmlhttp.send(JSON.stringify(user));
