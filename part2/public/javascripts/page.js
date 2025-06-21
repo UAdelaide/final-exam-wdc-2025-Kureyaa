@@ -211,7 +211,7 @@ function logout(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            sessionStorage.removeItem('user');
+            sessionStorage.removeItem('currentUser');
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Logout failed");
         }
