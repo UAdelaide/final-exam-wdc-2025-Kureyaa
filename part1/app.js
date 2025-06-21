@@ -103,6 +103,7 @@ app.get('/api/walkers/summary', async (req, res) => {
   }
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
