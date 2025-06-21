@@ -72,20 +72,11 @@ router.get('/dogs', (req, res) => {
     return res.status(401).json({ error: 'Not logged in' });
   }
 
-  const userId = req.session.user.user_id;
+  const ownerId = req.session.user.user_id;
 
-  db.query(`
-    SELECT d.dog_id, d.name, d.size, u.username AS owner_username
-    FROM Dogs d
-    JOIN Users u ON d.owner_id = u.user_id
-    WHERE u.user_id = ?
-  `, [userId])
-    .then(([rows]) => {
-      res.json(rows);
-    })
-    .catch((error) => {
-      console.error('SQL Error:', error);
-      res.status(500).json({ error: 'Failed to fetch dogs' });
-    });
+  try {
+
+    
+  }
 });
 module.exports = router;
