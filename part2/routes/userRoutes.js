@@ -76,6 +76,7 @@ router.get('/dogs', (req, res) => {
 
   try {
     const [rows] = db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id = ?`, [ownerId]);
+    
   }
 });
 module.exports = router;
