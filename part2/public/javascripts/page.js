@@ -203,6 +203,7 @@ function login(){
             alert("Login failed");
         }
     };
+    xmlhttp.send(JSON.stringify(payload));
 }
 
 function logout(){
