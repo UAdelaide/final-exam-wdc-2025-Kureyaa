@@ -62,7 +62,7 @@ app.get('/', async (req, res) => {
 app.get('/api/dogs', async (req, res) => {
   try {
     const [rows] = await db.query(
-        `SELECT `
+        `SELECT d.`
     );
     res.json(rows);
   } catch (err) {
