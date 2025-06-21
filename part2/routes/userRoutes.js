@@ -67,4 +67,17 @@ router.post('/logout', (req, res) => {
   });
 });
 
+router.get('/dashboard', (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).json({ error: 'Not logged in' });
+  }
+  const user = req.session.user;
+  if (user.role === 'owner') {
+    res.redirect('/owner-dashboard.html');
+  } else if (user.role === 'walker') {
+    res.redirect('/walker-dashboard.html');
+  } else {
+    res.status(403).json({ error: 'Access denied' });
+  }
+});
 module.exports = router;
