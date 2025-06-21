@@ -188,13 +188,8 @@ function login(){
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            // Display welcome message in a dedicated element instead of alert
-            var welcomeMsg = document.getElementById('welcome-message');
-            if (welcomeMsg) {
-                welcomeMsg.textContent = "Welcome " + this.responseText;
-                welcomeMsg.style.display = "block";
-            }
-
+            alert("Welcome "+this.responseText);
+            const {}
             // Store session
             sessionStorage.setItem('currentUser', JSON.stringify(user));
 
