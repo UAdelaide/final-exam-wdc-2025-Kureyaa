@@ -128,7 +128,7 @@
           try {
             const res = await fetch('/api/dogs');
             const list = await res.json();
-            form.value.dogs = data;
+            dogs.value = list;
           } catch {
             error.value = 'Failed to load dogs';
           }
