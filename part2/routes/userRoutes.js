@@ -67,6 +67,7 @@ router.post('/logout', (req, res) => {
   });
 });
 
+// GET all dogs for the logged-in user
 router.get('/dogs', (req, res) => {
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not logged in' });
@@ -78,7 +79,7 @@ router.get('/dogs', (req, res) => {
     const [rows] = db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id = ?`, [ownerId]);
     res.json(rows);
   } catch (err) {
-    
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 });
 module.exports = router;
