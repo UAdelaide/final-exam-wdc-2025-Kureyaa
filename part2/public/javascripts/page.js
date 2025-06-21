@@ -201,7 +201,7 @@ function login(){
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
-    xmlhttp
+    xmlhttp.send(JSON.stringify(payload));
     };
 
     // Open connection to server & send the post data using a POST request
