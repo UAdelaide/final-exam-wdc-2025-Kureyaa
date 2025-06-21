@@ -229,4 +229,5 @@ async function getCurrentUser() {
     const res = await fetch('/api/users/me', {
         credentials: 'same-origin'
     });
+    if (!res.ok) throw new Error()
 }
