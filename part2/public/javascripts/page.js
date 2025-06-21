@@ -189,7 +189,7 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             alert("Welcome "+this.responseText);
-            const {}
+            const { user } = JSON.parse(xmlhttp.responseText);
             // Store session
             sessionStorage.setItem('currentUser', JSON.stringify(user));
 
