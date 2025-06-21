@@ -225,10 +225,3 @@ function logout(){
 
 }
 
-async function getCurrentUser() {
-    const res = await fetch('/api/users/me', {
-        credentials: 'same-origin'
-    });
-    if (!res.ok) throw new Error('Not logged in');
-    return await res.json();
-}
