@@ -20,7 +20,7 @@ const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
 app.use('/walks', walkRoutes);
-app.use('/users', userRoutes);
+app.use('/api/users', userRoutes);
 
 // Export the app instead of listening here
 module.exports = app;
