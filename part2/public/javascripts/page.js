@@ -190,7 +190,7 @@ function login(){
             if (user.role === 'owner') {
                 window.location.href = '/owner';
             }
-            else if (user.role === 'walker') {
+            else {
                 window.location.href = '/walker';
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
