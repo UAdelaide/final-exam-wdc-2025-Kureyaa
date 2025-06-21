@@ -198,7 +198,6 @@ function login(){
     xmlhttp.open("POST", "/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
     xmlhttp.send(JSON.stringify(user));
-
 }
 
 function logout(){
