@@ -64,6 +64,15 @@ app.get('/', async (req, res) => {
   }
 });
 
+app.get('/api/dogs', async (req, res) => {
+  try {
+    const [rows] = await db.execute('SELECT * FROM Users');
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch books' });
+  }
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
