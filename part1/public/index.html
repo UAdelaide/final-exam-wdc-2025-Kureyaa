@@ -7,6 +7,14 @@
 </head>
 
 <body>
-    
+    <div id="app">
+        <h1>Dog of the day</h1>
+        <div class="dog-container">
+            <img :src="dogImage" alt="Dog of the day" />
+        </div>
+        <button @click="fetchDog">Get another dog</button>
+    </div>
+
+    <script src="/javascripts/app.js"></script>
 </body>
 </html>
