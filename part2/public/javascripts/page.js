@@ -212,6 +212,7 @@ function logout(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             sessionStorage.removeItem('currentUser');
+            window.location.href = '/login.html';
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Logout failed");
         }
