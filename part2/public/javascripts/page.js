@@ -202,7 +202,6 @@ function login(){
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
-    xmlhttp.send(JSON.stringify(payload));
     };
 }
 
