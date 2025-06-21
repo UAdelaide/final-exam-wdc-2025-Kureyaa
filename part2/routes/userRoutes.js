@@ -75,8 +75,7 @@ router.get('/dogs', (req, res) => {
   const ownerId = req.session.user.user_id;
 
   try {
-
-    
+    const [rows] = db.query(`SELECT dog_id, name
   }
 });
 module.exports = router;
