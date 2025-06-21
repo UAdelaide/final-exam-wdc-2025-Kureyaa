@@ -91,13 +91,15 @@
           } catch {
             return window.location.href = '/'; // not logged in
           }
+          await loadWalkRequests();
         });
 
         return {
           walks,
           message,
           error,
-          applyToWalk
+          applyToWalk,
+          currentUser
         };
       }
     }).mount('#app');
