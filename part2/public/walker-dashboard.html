@@ -87,7 +87,9 @@
           loadWalkRequests();
 
           try {
-            currentUser.value 
+            currentUser.value = await getCurrentUser();
+          } catch {
+            return window.location.href = '/login';
           }
         });
 
