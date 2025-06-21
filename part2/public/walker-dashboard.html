@@ -89,7 +89,7 @@
           try {
             currentUser.value = await getCurrentUser();
           } catch {
-            return window.location.href = '/login';
+            return window.location.href = '/'; // not logged in
           }
         });
 
