@@ -12,7 +12,7 @@
         <p>Name: Fido</p>
         <img :src="dogImage" alt="A cute random dog" width="400">
         <button type="button" @click="bookWalk">Book Walk</button>
-        <button type="button" @click="">More Info</button>
+        <button type="button" @click="moreInfo">More Info</button>
     </div>
 
     <footer>Best Dog Walk Service Website!</footer>
@@ -27,7 +27,7 @@
                 bookWalk() {
                     alert('Booked!');
                 },
-                learnMore() {
+                moreInfo() {
                     alert('Learn More');
                 }
             },
