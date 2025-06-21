@@ -32,12 +32,11 @@
           <tr>
             <th>Name</th>
             <th>Size</th>
-            <th>Own</th>
-            <th>Size</th>
+            <th>Owner</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="dog in dogs" :key="dog.id">
+          <tr v-for="dog in dogs" :key="dog.dog_id">
             <td>{{ dog.name }}</td>
             <td>{{ dog.breed }}</td>
             <td>{{ dog.age }} years</td>
