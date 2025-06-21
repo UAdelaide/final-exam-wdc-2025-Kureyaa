@@ -60,7 +60,7 @@
           const res = await fetch('/api/dogs');
           this.dogs = await res.json();
 
-          await .all
+          for (const dog of this.dogs)
         }
       }
     }).mount('#app');
